@@ -4,8 +4,7 @@
 (load "prime.lisp")
 
 (defun listprimes (N)
-	"Compute N!"
-	(if (= (isprime N) 1)
-		collect N)
-	(if (= N 20)
-		(listprimes (+ N 1))))
+	"Find first 250 primes"
+	(loop for N from 1 to 250
+		if (= (isprime N) 1)
+			collect N))
